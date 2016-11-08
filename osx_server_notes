@@ -1,0 +1,70 @@
+Server Admin - settings-alerts
+
+- Low Space
+- Software Updates
+- Certificates about to expire
+
+Server app -
+
+- Virus detected in mailserver
+- Network change
+- Low space
+- Software Updates
+
+VPND.log - VPN daemon on server
+PPP.log - VPN client log
+
+File System ACLS - who can do what to a file or folder
+Service ACLS - who can use what service
+
+You can set up Group Folders in Groups but it puts them in Groups/groupname
+
+You can also set up share points for individuals or groups that will not be accessible to others.
+
+Service Access
+Servers app can show what they access
+Server admin can show what and how much access
+
+Podcast Producer
+adds things to audio/video
+distributes to blog/wiki
+
+XGrid
+drstributed computing
+
+RADIUS - protocol for authenticating and such
+Functions
+
+- to authenticate users or devices before granting them access to a network,
+- to authorize those users or devices for certain network services and
+- to account for usage of those services.
+
+User stuff - ~/Library/Logs
+Apple stuff - /Library/Logs
+
+- AFP (AppleFileService)
+- PasswordService
+- PasswordReset
+- PostgreSQL
+- Open Directory - slapconfig.log
+- WebDAV - userwebdav.log(?)
+- Library/Server/Web/Data/Sites - Web service (logs in Library/Log)
+
+Unix stuff - /var/Logs
+
+- Apache (apache2)
+- Wiki (collabd)
+- CalDAV (caldavd)
+- Kerberos (krb5kdc)
+- Mail (SMTP) - mail.log
+- Mail (IMAP/POP) - mailaccess.log
+    - Filtered in Server app log section
+- VPN (ppp)
+    - vpnd.log - serverside
+    - ppp.log - clientside
+
+VPN Stuff
+Only serve L2TP with IPSec
+Recently added PPTP (may not be on test)
+Setup in Server App
+Distribute configuration profile
