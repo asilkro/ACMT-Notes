@@ -1,0 +1,101 @@
+Start up process:
+
+- Plug in
+    - Trickle power is established
+    - SMC gets power to see if the system
+    - SMC looks to see if everything should be getting started
+        - http://support.apple.com/kb/HT3964 is the guide on resetting SMC for pretty much every machine
+        - ALWAYS CONSULT YOUR ATG
+
+- BootROM
+    - Permanent code written on the Read Only Memory (ROM) of the Microcontroller, This allow the device to Boot and Initialized all the Peripherials, IOs and some hardware components. Since it is written on read only memory, this code cannot be update or change.
+    - BootROM initializes the rest of the hardware
+    - Tones indicate issues
+
+        - http://support.apple.com/kb/HT2538 - Diagnostics
+        - http://support.apple.com/kb/ht1547 - POST beeps
+        - Short beep = no RAM
+        - Long beep = Firmware update in progress
+
+- 1 beep = no RAM installed
+- 2 beeps = incompatible RAM
+- 3 beeps = no good banks
+- 4 beeps = no good boot images in the boot ROM (and/or bad sys config block)
+- 5 beeps = processor is not usable
+
+- POST: Power on self test -> Black screen
+    - Main Logic Board
+        - Processor
+    - RAM
+    - Power supply
+        - Power cord
+    - Speaker
+
+Common reasons for failure: Failed components, improper shutdowns, failed firmware updates
+
+- Firmware (EFI) - involuntary function like breathing -> we don't control it its built-in
+    - Software built into hardware becomes firmware
+    - Recognizable by frozen grey screen
+    - Bootup options are unavailable
+
+Firmware is a combination of software and hardware. Computer chips that have data or programs recorded on them are firmware. These chips commonly include the following:
+
+- ROMs (read-only memory)
+- PROMs (programmable read-only memory)
+- EPROMs (erasable programmable read-only memory)
+- ^^ http://support.apple.com/kb/HT1471 - All about firmware
+Common reasons for failure: Failed components, external peripherals (printers, hard drives, flash drives), failed firmware updates
+
+- Boot Loader (Boot.efi) -> Apple logo
+    - Folder/question mark
+    - Stuck on globe
+    - boots straight to lion recovery
+    - frozen gear
+    - prohibitory sign
+    - kernel panic (somewhat)
+
+- Kernel/LaunchD
+    - After EFI
+    - Kernel then LaunchD
+    - WindowsServer - beginning of the writing of the GUI -> how your OS generates what it looks like
+- Apple Logo
+    - Stuck on Globe icon
+    - no spinning gear, hangs
+    - beeps 3 times
+
+Common reason for failure: failed software update, incorrect build of OSX, Directory Damage, Missing important system files
+
+Tools and techniques: Run MRI, verify OS version and build, OSX / Mac OS recovery build, Safe/Verbose mode
+
+Safe mode = awesome http://support.apple.com/kb/HT1564
+Safe mode checks your directory and fixes it. If it boots into the OS then your directory might be fixed already
+
+Flashing Question Mark Folder - Fails to load Boot Loader, Cannot Find Startup Disk
+Common reasons for failure: Startup disk selection has been modified, PRAM Reset, Unusable system software, no system software found, Possible Failed Components
+Tools and techniques: Reset PRAM/NVRAM, remove peripherals, access startup manager, target disk mode, component isolation
+
+Constant Spinning Gear - Stuck spinning gear, kernel panics
+Common reasons for failure: Failed Software update, incorrect build of OS X installed, directory damage, damaged kernel extensions, missing important system files
+Tools and techniques: Run MRI, Verify OS and build, OSX / Mac OS recovery boot, Safe mode, verbose mode
+
+Prohibitory Sign - Freezes at Apple Logo, Prohibitory Sign, No Spinning Gear/Hangs, Kernel Panics
+Common reasons for failure: Failed Software update, incorrect build of OS X installed, directory damage, damaged kernel extensions, missing important system files
+
+Tools and techniques: Run MRI, Verify OS and build, OSX / Mac OS recovery boot, Safe mode, verbose mode
+
+Apple Logo - generally stuck at kernel
+Spinning logo - kernel extensions
+Prohibitory sign - incorrect build
+
+Login Window - Hangs on plain Linen background, cannot login
+Common reasons for failure: Forgotten password, login items, usable user data, excessive/damaged fonts
+Tools and techniques: Run MRI, verify OS and build, OSX / Mac OS recovery, reset password, reset ACLs, Safe mode, try another user
+
+After login issues - Spinning beach ball, unresponsive applications, extreme slowness
+Common reasons for failure: login items, unusable user data, incompatible applications, out of date application versions, user error (50 gigs of raw images on desktop)
+Tools and techniques: Run MRI, Verify OS and build, OSX / Mac OS recovery boot, Safe mode, Try another user, reset ACLs, activity monitor, read logs/console, remove login items, update software and applications
+
+Apple logo = found boot.efi
+HT2674 is boot process
+Wheel is loading kernel
+Spinning gear forever - failure to load launchd
