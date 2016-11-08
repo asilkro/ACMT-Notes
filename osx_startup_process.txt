@@ -1,0 +1,88 @@
+What are the primary system startup stages and user environment stages in OS X, and in what order do they start?
+
+- Primary system startup stages are (in order)
+    - firmware
+    - booter
+    - kernel
+    - system launchd
+- Primary user environment stages are (in order)
+    - loginwindow
+    - user launched
+    - user environment.
+
+What are the visual and audible cues of the stages of system startup?
+
+- Firmware—startup chime or bright flash of the power-on light followed by a light gray screen on the primary display
+- Booter—a dark gray Apple logo on the primary display
+- Kernel—a small dark gray spinning gear or spinning earth icon below the Apple logo
+- System launchd—a white screen on all displays followed by the login screen.
+
+What does the firmware do? What is the POST?
+
+The firmware initializes the Mac's hardware and locates the booter file on a system volume.
+The Power-On Self-Test (POST) checks for basic hardware functionality when your Mac turns on.
+
+What role does the system launchd process serve during system startup?
+
+The system launchd process is ultimately responsible for starting every system process.
+It also manages system startup and starts the loginwindow process.
+
+What items are automatically started by the system launchd during system startup?
+
+the system launched process automatically starts
+
+- /System/Library/LaunchDaemons
+- /Library/LaunchDaemons
+- /Library/StartupItems (via SystemStarter)
+- /etc/rc.local UNIX script (if it exists)
+
+What role does the loginwindow process serve in system startup?
+
+It displays the login screen that allows the user to authenticate, and then sets up and manages the graphical interface user environment.
+
+What is the difference between launch daemons, startup items, launch agents, and login items?
+
+The launchd process opens launch daemons and startup items during system startup on behalf of the root user.
+Launch agents and login items are opened during initialization of the user environment by the user's specific launchd process.
+
+What happens during user logout?
+
+During user logout, the user's loginwindow process does the following:
+
+- requests that the user quit all applications
+- automatically quits any user background processes
+- runs any logout scripts
+- records the logout to the main system.log file
+- resets device permissions and preferences to their defaults
+- quits the user's loginwindow and launchd processes.
+
+What happens during system shutdown?
+
+During system shutdown, the loginwindow process logs all users out and then tells the kernel to quit all remaining system processes.
+Once the kernel quits all system processes, the Mac will shut down.
+
+What is the difference between Safe Boot, Safe Mode, and Safe Login?
+
+- Safe Boot refers to when the system is starting up
+- Safe Mode is when the system is actually running
+- Safe Login is when the system starts up the user session.
+
+Which items aren't loaded when OS X safe-boots?
+
+- any third-party items:
+    - KEXTs
+    - launch agents
+    - launch daemons
+    - startup items
+    - fonts
+    - any user login items
+    - any user-specific launch agents.
+
+What keyboard shortcut do you use to safe-boot OS X?
+
+A Safe Boot is initiated by holding down the Shift key during system startup.
+
+How do you resolve an issue that disappears when the Mac successfully safe-boots?
+
+If an issue disappears when the Mac successfully safe-boots, then you must find and remove or quarantine the third-party startup resource that caused the issue.
+The best way to isolate the problematic item is to start up the Mac in Verbose mode and then see where the startup process fails. Verbose mode is initiated by holding down Command-V during system startup.
