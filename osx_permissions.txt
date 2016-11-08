@@ -1,0 +1,32 @@
+Permissions
+
+Some possible settings
+
+- Read only
+    - Public folder
+- Read and write
+    - Full access, default for anything you create/use on your account
+- Write only (Dropbox)
+    - Like a post box, you drop inside and thats it
+- No access (denied)
+
+http://support.apple.com/kb/HT1452 - all about permissions
+
+Repaired by Software Update, Disk Utility, Reset Password utility
+
+Disk utility => REPAIRS ONLY WHAT IS ON THE DRIVE YOU'RE RUNNING FROM -> IF YOU BOOT OFF A RESOURCE DRIVE YOU ARENT FIXING IT!!!
+RUN THE UTILITY FROM WHATEVER DRIVE YOU NEED FIXED AND DON'T RUN FROM DRIVE
+
+-IT ONLY FIXES APPLICATIONS/LIBRARY/SYSTEM - NOT USER
+
+-Works by checking receipts
+
+RESET ACL'S WILL FIX YOUR USER FOLDERS PERMISSIONS -> USED WHEN PERMISSIONS ISSUES DO NOT OCCUR IN A KG USER
+
+http://support.apple.com/kb/HT4761?login=signin - reset acls from recovery partition
+
+ACL = access control list
+
+Posix permissions -> where we started with UNIX
+ -easy to manage but doesn't offer a lot of advanced controls
+3 controls only - ACLs let you have more than 3 groups
