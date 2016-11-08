@@ -1,0 +1,39 @@
+File Vault 2
+
+- full disk encryption
+- XTS-AES 128 encryption
+- External drive support
+- Optimized initial encryption (fast first time)
+- Not supported in RAID configurations
+- Recovery Key is a backup unlock method in case the unlock-enabled user(s) forget their password
+- Store recovery key not on the computer -> can be copied and emailed or stored somewhere not anywhere near the computer.
+  -can be redirected to JSS, AD, McAfee or other repository.
+
+http://support.apple.com/kb/HT4790 - all about file vault
+
+ Firmware Password
+
+- disables key commands (NVRAM, Target Disk Mode, 
+- shift+control+command+option+s -> copy hash
+- has to be reset with by Apple TSPS (search TSPS chat in GSX)
+- follow the directions from the email
+- TechID that it asks for is the same as your number from pro-metric
+
+http://support.apple.com/kb/HT1352 - setting up open firmware password
+http://support.apple.com/kb/TS3554 - recovering a lost firmware password
+
+Secure Empty Trash
+
+- writes over sectors of drive with zeroes
+- tries to clear "ghost" files
+- option erase or set in Finder preferences
+- deprecated in Mac OS 10.12 Sierra
+
+http://docs.info.apple.com/article.html?path=Mac/10.4/en/mh475.html
+
+Secure Erase
+NOTE: ZEROING/MULTIPASS ERASES CAN ADVERSELY AFFECT YOUR SOLID STATE MEMORY'S EFFECTIVE LIIFESPAN IN A SIGNIFICANT WAY. EXERCISE EXTREME CAUTION.
+- zero out hard drive
+- similar to secure empty trash but much larger scale
+- 0 pass, 1 pass, 3 passes, and 7 passes depending on need
+- deprecated in Mac OS 10.12 Sierra
