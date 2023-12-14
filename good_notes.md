@@ -46,6 +46,6 @@ Steps to reproduce:
 3. Power cycled machine and reset NVRAM -> issue persists on reboot
 
 Cosmetic condition:
--Asset tag WS000555 on bottom case near hinge
--Palm rest appears to have some discoloration from normal usage
--Quarter sized dent to back of display approximately 2 inches from left edge of hinge
+* Asset tag WS000555 on bottom case near hinge
+* Palm rest appears to have some discoloration from normal usage
+* Quarter sized dent to back of display approximately 2 inches from left edge of hinge
