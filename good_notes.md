@@ -1,26 +1,31 @@
-What makes good notes:
+# What makes good notes:
 
 - Clarity
 - Detailing
     - Bullet points
     - What you did -> What comes next
+    - Action -> Outcome
     - Troubleshooting steps taken -> results
-- Customer issue
+- User issue
     - <name> states/reports/mentioned/described/etc.
 - Steps to reproduce
     - Descriptive of what happens - action->results
     - CompTIA modifier
-- Jargon-free: no acronyms. minus RAM. If it's not industry standard (i.e. its internal only) then DONT USE IT
-    - Assume any end-user will see this and need to be able to understand what you've done.
+- Jargon-free: no acronyms. minus RAM.
+    * If it's not industry standard (i.e. its internal only) then DONT USE IT
+    * Assume any end-user will see this and need to be able to understand what you've done.
+- Courtroom Context:
+  * You should be able to comfortably defend or explain anything you write in a courtroom.
+  * If you cannot, DO NOT WRITE IT.
 
-Notes should be added when:
+## Notes should be added when:
 
 - Anytime ticket status changed
 - Anytime a component (including software) is removed, altered or modified
 - Returned machine to end user
 
 --
-Examples of bad notes:
+Bad notes:
 
 Issue: Broken
 Steps to  reproduce: verified at desk
