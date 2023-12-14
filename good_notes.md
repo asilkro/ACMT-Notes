@@ -23,20 +23,25 @@
 - Anytime ticket status changed
 - Anytime a component (including software) is removed, altered or modified
 - Returned machine to end user
+---
 
---
-Bad Note Examples:
+### Bad Note Examples:
 
 Issue: Broken
+
 Steps to  reproduce: verified at desk
+
 Cosmetic Condition: fine
 
+---
 Issue: cracked display
+
 Steps to reproduce: yep, it's cracked
+
 Cosmetic Condition: broken
 
---
-Good Note Example:
+---
+### Good Note Example:
 
 Issue: Bob Smith reports color and flickering issues with display.
 
