@@ -6,6 +6,6 @@ Many of the technical details may be obsolete or no longer accurate, but I stand
 
 ## Credits
 
-⋅⋅* Jess Weiss
+  * Jess Weiss
 
-⋅⋅* .kext / Drop The Mic ACMT group
+  * .kext / Drop The Mic ACMT group
