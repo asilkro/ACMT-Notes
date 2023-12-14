@@ -25,7 +25,7 @@
 - Returned machine to end user
 
 --
-Bad notes:
+Bad Note Examples:
 
 Issue: Broken
 Steps to  reproduce: verified at desk
@@ -34,14 +34,17 @@ Cosmetic Condition: fine
 Issue: cracked display
 Steps to reproduce: yep, it's cracked
 Cosmetic Condition: broken
+
 --
-Good note example:
+Good Note Example:
 
 Issue: Bob Smith reports color and flickering issues with display.
+
 Steps to reproduce:
--Power on machine -> display color appears incorrect (tinted green)
--Reset display color profile in system prefrences -> display color changes but is still green
--Power cycled machine and reset NVRAM -> issue persists on reboot
+1. Power on machine -> display color appears incorrect (tinted green)
+2. Reset display color profile in system prefrences -> display color changes but is still green
+3. Power cycled machine and reset NVRAM -> issue persists on reboot
+
 Cosmetic condition:
 -Asset tag WS000555 on bottom case near hinge
 -Palm rest appears to have some discoloration from normal usage
